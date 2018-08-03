@@ -29,6 +29,12 @@ class Age {
     let venusAge = Math.floor(age / .62);
     return venusAge;
   }
+
+  marsAge() {
+    let age = this.secondsToYears();
+    let marsAge = Math.floor(age / 1.88);
+    return marsAge;
+  }
 }
 
 export default Age;

@@ -24,4 +24,10 @@ describe('Age', function() {
     let result = age.venusAge();
     expect(result).toEqual(38);
   });
+
+  it('should convert Earth age to Mars age', function() {
+    let age = new Age(1994, 3, 30);
+    let result = age.marsAge();
+    expect(result).toEqual(12);
+  });
 });
