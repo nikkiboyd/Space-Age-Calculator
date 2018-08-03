@@ -5,11 +5,10 @@ class Age {
   }
 
   ageInSeconds() {
-    let age = this.birthDay.getTime();
-    console.log(age);
-    let today = this.currentDay.getTime();
-    console.log(today);
-    let ageInSeconds = (age - today);
+    let age = this.birthDay;
+    let today = this.currentDay;
+    let difference = today.getTime() - age.getTime();
+    let ageInSeconds = difference / 1000;
     return ageInSeconds;
   }
 }
