@@ -41,8 +41,8 @@ describe('Age', function() {
   it('should return number of years left to live on Mercury', function() {
     let age = new Age(1994, 3, 30);
     let mercuryAge = age.mercuryAge();
-    let result = age.mercuryExpectancy(99);
-    expect(result).toEqual("Congrats! You've lived 1 year(s) longer than most Mercurians!");
+    let result = age.mercuryExpectancy(100);
+    expect(result).toEqual(0);
   });
 
   it('should return number of years left to live on Venus', function() {
@@ -64,5 +64,19 @@ describe('Age', function() {
     let jupiterAge = age.jupiterAge();
     let result = age.jupiterExpectancy(2);
     expect(result).toEqual(0);
+  });
+
+  it('should return number of years surpassing the life expectancy on Mercury', function() {
+    let age = new Age(1994, 3, 30);
+    let mercuryAge = age.mercuryAge();
+    let result = age.mercuryExpectancy(99);
+    expect(result).toEqual("Congrats! You've lived 1 year(s) longer than most Mercurians!");
+  });
+
+  it('should return number of years surpassing the life expectancy on Venus', function() {
+    let age = new Age(1994, 3, 30);
+    let venusAge = age.venusAge();
+    let result = age.venusExpectancy(37);
+    expect(result).toEqual("Congrats! You've lived 1 year(s) longer than most Venusians!");
   });
 });
