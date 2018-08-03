@@ -12,4 +12,10 @@ describe('Age', function() {
     let result = age.secondsToYears();
     expect(result).toEqual(24);
   });
+
+  it('should convert Earth age to Mercury age', function() {
+    let age = new Age(1994, 3, 30);
+    let result = age.mercurcyAge();
+    expect(result).toEqual(100);
+  });
 });

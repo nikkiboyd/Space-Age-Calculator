@@ -17,6 +17,12 @@ class Age {
     let ageInYears = Math.floor(seconds / 31536000);
     return ageInYears;
   }
+
+  mercurcyAge() {
+    let age = this.secondsToYears();
+    let mercurcyAge = age / .24;
+    return mercurcyAge;
+  }
 }
 
 export default Age;
