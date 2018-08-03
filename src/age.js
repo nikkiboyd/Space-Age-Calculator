@@ -11,6 +11,12 @@ class Age {
     let ageInSeconds = difference / 1000;
     return ageInSeconds;
   }
+
+  secondsToYears() {
+    let seconds = this.ageInSeconds();
+    let ageInYears = Math.floor(seconds / 31536000);
+    return ageInYears;
+  }
 }
 
 export default Age;

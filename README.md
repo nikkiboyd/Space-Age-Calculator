@@ -1,7 +1,5 @@
 Program should...
-- Allow a user to input their birthday
-- Convert the user's birthday into seconds from current date/time
-- Subtract the user's birthday from the current date (in seconds)
+- Convert the user's birthday into seconds and find difference from current date/time
 - Convert the difference in seconds back to years
 - Find Mercury age by dividing a user's age by .24
 - Find Venus age by dividing a user's age by .62
