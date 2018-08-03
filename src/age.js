@@ -47,6 +47,12 @@ class Age {
     let yearsToLive = maxLife - mercuryAge;
     return yearsToLive;
   }
+
+  venusExpectancy(maxLife) {
+    let venusAge = this.venusAge();
+    let yearsToLive = maxLife - venusAge;
+    return yearsToLive;
+  }
 }
 
 export default Age;

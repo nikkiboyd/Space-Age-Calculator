@@ -41,8 +41,14 @@ describe('Age', function() {
   it('should return number of years left to live on Mercury', function() {
     let age = new Age(1994, 3, 30);
     let mercuryAge = age.mercuryAge();
-    console.log(mercuryAge);
     let result = age.mercuryExpectancy(100);
+    expect(result).toEqual(0);
+  });
+
+  it('should return number of years left to live on Venus', function() {
+    let age = new Age(1994, 3, 30);
+    let venusAge = age.venusAge();
+    let result = age.venusExpectancy(38);
     expect(result).toEqual(0);
   });
 });
