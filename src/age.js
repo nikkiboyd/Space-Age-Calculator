@@ -53,6 +53,12 @@ class Age {
     let yearsToLive = maxLife - venusAge;
     return yearsToLive;
   }
+
+  marsExpectancy(maxLife) {
+    let marsAge = this.marsAge();
+    let yearsToLive = maxLife - marsAge;
+    return yearsToLive;
+  }
 }
 
 export default Age;

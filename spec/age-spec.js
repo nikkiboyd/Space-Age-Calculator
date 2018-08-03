@@ -51,4 +51,11 @@ describe('Age', function() {
     let result = age.venusExpectancy(38);
     expect(result).toEqual(0);
   });
+
+  it('should return number of years left to live on Mars', function() {
+    let age = new Age(1994, 3, 30);
+    let marsAge = age.marsAge();
+    let result = age.marsExpectancy(12);
+    expect(result).toEqual(0);
+  });
 });
