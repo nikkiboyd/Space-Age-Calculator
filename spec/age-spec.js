@@ -79,4 +79,18 @@ describe('Age', function() {
     let result = age.venusExpectancy(37);
     expect(result).toEqual("Congrats! You've lived 1 year(s) longer than most Venusians!");
   });
+
+  it('should return number of years surpassing the life expectancy on Mars', function() {
+    let age = new Age(1994, 3, 30);
+    let marsAge = age.marsAge();
+    let result = age.marsExpectancy(11);
+    expect(result).toEqual("Congrats! You've lived 1 year(s) longer than most Martians!");
+  });
+
+  it('should return number of years surpassing the life expectancy on Jupiter', function() {
+    let age = new Age(1994, 3, 30);
+    let jupiterAge = age.jupiterAge();
+    let result = age.jupiterExpectancy(1);
+    expect(result).toEqual("Congrats! You've lived 1 year(s) longer than most Jovians!");
+  });
 });
