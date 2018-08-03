@@ -30,4 +30,10 @@ describe('Age', function() {
     let result = age.marsAge();
     expect(result).toEqual(12);
   });
+
+  it('should convert Earth age to Jupiter age', function() {
+    let age = new Age(1994, 3, 30);
+    let result = age.jupiterAge();
+    expect(result).toEqual(2);
+  });
 });

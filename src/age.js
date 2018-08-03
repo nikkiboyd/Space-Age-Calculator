@@ -35,6 +35,12 @@ class Age {
     let marsAge = Math.floor(age / 1.88);
     return marsAge;
   }
+
+  jupiterAge() {
+    let age = this.secondsToYears();
+    let jupiterAge = Math.floor(age / 11.86);
+    return jupiterAge;
+  }
 }
 
 export default Age;
