@@ -59,6 +59,12 @@ class Age {
     let yearsToLive = maxLife - marsAge;
     return yearsToLive;
   }
+
+  jupiterExpectancy(maxLife) {
+    let jupiterAge = this.jupiterAge();
+    let yearsToLive = maxLife - jupiterAge;
+    return yearsToLive;
+  }
 }
 
 export default Age;

@@ -58,4 +58,11 @@ describe('Age', function() {
     let result = age.marsExpectancy(12);
     expect(result).toEqual(0);
   });
+
+  it('should return number of years left to live on Jupiter', function() {
+    let age = new Age(1994, 3, 30);
+    let jupiterAge = age.jupiterAge();
+    let result = age.jupiterExpectancy(2);
+    expect(result).toEqual(0);
+  });
 });
