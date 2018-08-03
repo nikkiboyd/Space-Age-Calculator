@@ -45,7 +45,11 @@ class Age {
   mercuryExpectancy(maxLife) {
     let mercuryAge = this.mercuryAge();
     let yearsToLive = maxLife - mercuryAge;
-    return yearsToLive;
+    if (yearsToLive < 0) {
+      return "Congrats! You've lived " + Math.abs(yearsToLive) + " year(s) longer than most Mercurians!";
+    } else {
+      return yearsToLive;
+    }
   }
 
   venusExpectancy(maxLife) {
