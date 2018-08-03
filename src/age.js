@@ -20,8 +20,14 @@ class Age {
 
   mercurcyAge() {
     let age = this.secondsToYears();
-    let mercurcyAge = age / .24;
+    let mercurcyAge = Math.floor(age / .24);
     return mercurcyAge;
+  }
+
+  venusAge() {
+    let age = this.secondsToYears();
+    let venusAge = Math.floor(age / .62);
+    return venusAge;
   }
 }
 

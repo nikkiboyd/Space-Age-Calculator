@@ -18,4 +18,10 @@ describe('Age', function() {
     let result = age.mercurcyAge();
     expect(result).toEqual(100);
   });
+
+  it('should convert Earth age to Venus age', function() {
+    let age = new Age(1994, 3, 30);
+    let result = age.venusAge();
+    expect(result).toEqual(38);
+  });
 });
