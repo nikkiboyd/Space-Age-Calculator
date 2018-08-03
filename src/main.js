@@ -11,5 +11,6 @@ $(document).ready(function() {
     let birthDate = $("#birth-date").val();
     let birthYear = $("#birth-year").val();
     let birthDay = new Age(birthYear, birthMonth, birthDate);
+    
   });
 });
