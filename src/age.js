@@ -55,19 +55,31 @@ class Age {
   venusExpectancy(maxLife) {
     let venusAge = this.venusAge();
     let yearsToLive = maxLife - venusAge;
-    return yearsToLive;
+    if (yearsToLive < 0) {
+      return "Congrats! You've lived " + Math.abs(yearsToLive) + " year(s) longer than most Venusians!";
+    } else {
+      return yearsToLive;
+    }
   }
 
   marsExpectancy(maxLife) {
     let marsAge = this.marsAge();
     let yearsToLive = maxLife - marsAge;
-    return yearsToLive;
+    if (yearsToLive < 0) {
+      return "Congrats! You've lived " + Math.abs(yearsToLive) + " year(s) longer than most Martians!";
+    } else {
+      return yearsToLive;
+    }
   }
 
   jupiterExpectancy(maxLife) {
     let jupiterAge = this.jupiterAge();
     let yearsToLive = maxLife - jupiterAge;
-    return yearsToLive;
+    if (yearsToLive < 0) {
+      return "Congrats! You've lived " + Math.abs(yearsToLive) + " year(s) longer than most Jovians!";
+    } else {
+      return yearsToLive;
+    }
   }
 }
 
