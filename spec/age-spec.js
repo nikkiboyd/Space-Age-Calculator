@@ -1,6 +1,7 @@
 import Age from './../src/age.js';
 
 describe('Age', function() {
+// Test passes - However, fails after first instance due to seconds constantly updating
 //   it('should display an inputted age into seconds', function() {
 //     let age = new Age(1994, 3, 30);
 //     let result = age.ageInSeconds();
@@ -15,7 +16,7 @@ describe('Age', function() {
 
   it('should convert Earth age to Mercury age', function() {
     let age = new Age(1994, 3, 30);
-    let result = age.mercurcyAge();
+    let result = age.mercuryAge();
     expect(result).toEqual(100);
   });
 
@@ -35,5 +36,13 @@ describe('Age', function() {
     let age = new Age(1994, 3, 30);
     let result = age.jupiterAge();
     expect(result).toEqual(2);
+  });
+
+  it('should return number of years left to live on Mercury', function() {
+    let age = new Age(1994, 3, 30);
+    let mercuryAge = age.mercuryAge();
+    console.log(mercuryAge);
+    let result = age.mercuryExpectancy(100);
+    expect(result).toEqual(0);
   });
 });

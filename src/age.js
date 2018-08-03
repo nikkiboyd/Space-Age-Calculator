@@ -18,7 +18,7 @@ class Age {
     return ageInYears;
   }
 
-  mercurcyAge() {
+  mercuryAge() {
     let age = this.secondsToYears();
     let mercurcyAge = Math.floor(age / .24);
     return mercurcyAge;
@@ -40,6 +40,12 @@ class Age {
     let age = this.secondsToYears();
     let jupiterAge = Math.floor(age / 11.86);
     return jupiterAge;
+  }
+
+  mercuryExpectancy(maxLife) {
+    let mercuryAge = this.mercuryAge();
+    let yearsToLive = maxLife - mercuryAge;
+    return yearsToLive;
   }
 }
 
