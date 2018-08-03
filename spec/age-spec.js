@@ -40,56 +40,48 @@ describe('Age', function() {
 
   it('should return number of years left to live on Mercury', function() {
     let age = new Age(1994, 3, 30);
-    let mercuryAge = age.mercuryAge();
     let result = age.mercuryExpectancy(100);
     expect(result).toEqual(0);
   });
 
   it('should return number of years left to live on Venus', function() {
     let age = new Age(1994, 3, 30);
-    let venusAge = age.venusAge();
     let result = age.venusExpectancy(38);
     expect(result).toEqual(0);
   });
 
   it('should return number of years left to live on Mars', function() {
     let age = new Age(1994, 3, 30);
-    let marsAge = age.marsAge();
     let result = age.marsExpectancy(12);
     expect(result).toEqual(0);
   });
 
   it('should return number of years left to live on Jupiter', function() {
     let age = new Age(1994, 3, 30);
-    let jupiterAge = age.jupiterAge();
     let result = age.jupiterExpectancy(2);
     expect(result).toEqual(0);
   });
 
   it('should return number of years surpassing the life expectancy on Mercury', function() {
     let age = new Age(1994, 3, 30);
-    let mercuryAge = age.mercuryAge();
     let result = age.mercuryExpectancy(99);
     expect(result).toEqual("Congrats! You've lived 1 year(s) longer than most Mercurians!");
   });
 
   it('should return number of years surpassing the life expectancy on Venus', function() {
     let age = new Age(1994, 3, 30);
-    let venusAge = age.venusAge();
     let result = age.venusExpectancy(37);
     expect(result).toEqual("Congrats! You've lived 1 year(s) longer than most Venusians!");
   });
 
   it('should return number of years surpassing the life expectancy on Mars', function() {
     let age = new Age(1994, 3, 30);
-    let marsAge = age.marsAge();
     let result = age.marsExpectancy(11);
     expect(result).toEqual("Congrats! You've lived 1 year(s) longer than most Martians!");
   });
 
   it('should return number of years surpassing the life expectancy on Jupiter', function() {
     let age = new Age(1994, 3, 30);
-    let jupiterAge = age.jupiterAge();
     let result = age.jupiterExpectancy(1);
     expect(result).toEqual("Congrats! You've lived 1 year(s) longer than most Jovians!");
   });
